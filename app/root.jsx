@@ -1,5 +1,7 @@
-import { Meta, Links } from "@remix-run/react";
-import styles from "./styles/index.css";
+import { Meta, Links, Outlet, Scripts, LiveReload } from "@remix-run/react";
+import styles from "~/styles/index.css";
+import Header from "~/components/header";
+import Footer from "~/components/footer";
 
 export function meta() {
   return [
@@ -38,7 +40,8 @@ export function links() {
 export default function App() {
   return (
     <Document>
-      <h1>Desde Document</h1>
+      {/* <h1>Concha</h1> */}
+      <Outlet />
     </Document>
   );
 }
@@ -50,7 +53,13 @@ function Document({ children }) {
         <Meta />
         <Links />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        <Scripts />
+        <LiveReload />
+      </body>
     </html>
   );
 }
