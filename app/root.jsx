@@ -40,7 +40,6 @@ export function links() {
 export default function App() {
   return (
     <Document>
-      {/* <h1>Concha</h1> */}
       <Outlet />
     </Document>
   );

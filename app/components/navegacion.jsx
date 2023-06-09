@@ -4,10 +4,7 @@ function Navegacion() {
   const location = useLocation();
   return (
     <nav className="navegacion">
-      <Link
-        to="/index"
-        className={location.pathname === "/index" ? "active" : ""}
-      >
+      <Link to="/" className={location.pathname === "/" ? "active" : ""}>
         Inicio
       </Link>
       <Link
@@ -26,7 +23,7 @@ function Navegacion() {
         to="/blog"
         className={location.pathname === "/blog" ? "active" : ""}
       >
-        BLog
+        Blog
       </Link>
     </nav>
   );

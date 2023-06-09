@@ -5,10 +5,9 @@ function Footer() {
     <footer className="footer">
       <div className="contenedor contenido">
         <Navegacion />
-
-        {/* <p className="copyright">
+        <p className="copyright">
           © Todos los Derechos Reservados {new Date().getFullYear()}
-        </p> */}
+        </p>
       </div>
     </footer>
   );
