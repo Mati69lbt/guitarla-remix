@@ -11,7 +11,7 @@ export async function loader() {
 
 export function meta() {
   return [
-    { title: "GuitarLa - Tienda" },
+    { title: "GuitarLA - Tienda" },
     {
       description: "Venta de Guitarras, Blog de Musica, Coleccion de guitarras",
     },

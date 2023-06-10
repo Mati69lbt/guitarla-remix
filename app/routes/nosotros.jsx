@@ -3,7 +3,7 @@ import style from "../styles/nosotros.css";
 
 export function meta() {
   return [
-    { title: "GuitarLa - Nosotros" },
+    { title: "GuitarLA - Nosotros" },
     { description: "Venta de Guitarras, Blog de Musica" },
   ];
 }
