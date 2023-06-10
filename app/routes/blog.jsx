@@ -1,8 +1,33 @@
+import { useLoaderData } from "@remix-run/react";
+import Post from "~/components/post";
+import { getPosts } from "~/models/post.server";
+import style from "../styles/blog.css";
+
+export async function loader() {
+  const posts = await getPosts();
+  return posts.data;
+}
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: style,
+    },
+  ];
+}
+
 function Blog() {
+  const posts = useLoaderData();
+
   return (
-    <div>
-      <h1>Desde el Blog!! </h1>
-    </div>
+    <main className="contenedor">
+      <h2 className="heading">B l o g</h2>
+      <div className="blog">
+        {posts &&
+          posts?.map((post) => <Post key={post.id} post={post.attributes} />)}
+      </div>
+    </main>
   );
 }
 
