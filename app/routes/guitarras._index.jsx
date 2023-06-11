@@ -1,8 +1,6 @@
-//importa useLoaderData
 import { useLoaderData } from "@remix-run/react";
 import ListadoGuitarras from "~/components/listado-guitarras";
 import { getGuitarras } from "~/models/guitarras.server";
-import style from "~/styles/guitarras.css";
 
 export async function loader() {
   const guitarras = await getGuitarras();
@@ -18,23 +16,10 @@ export function meta() {
   ];
 }
 
-export function links() {
-  return [
-    {
-      rel: "stylesheet",
-      href: style,
-    },
-  ];
-}
-
 function Tienda() {
   const guitarras = useLoaderData();
 
-  return (
-    <main className="contenedor">
-      <ListadoGuitarras guitarras={guitarras} />
-    </main>
-  );
+  return <ListadoGuitarras guitarras={guitarras} />;
 }
 
 export default Tienda;
