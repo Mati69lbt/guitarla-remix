@@ -50,7 +50,7 @@ export default function PostUrl() {
   const { titulo, contenido, imagen, publishedAt } = post?.data[0].attributes;
   const img = imagen?.data?.attributes.formats.medium.url;
   return (
-    <article className="post">
+    <article className="post mt-3">
       <img className="imagen" src={img} alt={titulo} />
       <div className="contenido">
         <h3>{titulo}</h3>
