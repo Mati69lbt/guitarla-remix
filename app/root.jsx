@@ -11,6 +11,7 @@ import {
 import styles from "~/styles/index.css";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
+import { useState } from "react";
 
 export function meta() {
   return [
@@ -47,9 +48,48 @@ export function links() {
 }
 
 export default function App() {
+  const [carrito, setCarrito] = useState([]);
+
+  const agregarCarrito = (guitarra) => {
+    if (carrito.some((guitarraState) => guitarraState.id === guitarra.id)) {
+      const carritoACtualizado = carrito.map((guitarraState) => {
+        if (guitarraState.id === guitarra.id) {
+          guitarraState.cantidad = guitarra.cantidad;
+        }
+        return guitarraState;
+      });
+      setCarrito(carritoACtualizado);
+    } else {
+      setCarrito([...carrito, guitarra]);
+    }
+  };
+
+  const actualizarCantidad = (guitarra) => {
+    const carritoACtualizado = carrito.map((guitarraState) => {
+      if (guitarraState.id === guitarra.id) {
+        guitarraState.cantidad = guitarra.cantidad;
+      }
+      return guitarraState;
+    });
+    setCarrito(carritoACtualizado);
+  };
+  //eliminarGuitarra(id)
+  const eliminarGuitarra = (id) => {
+    const carritoACtualizado = carrito.filter(
+      (guitarraState) => guitarraState.id !== id
+    );
+    setCarrito(carritoACtualizado);
+  };
   return (
     <Document>
-      <Outlet />
+      <Outlet
+        context={{
+          agregarCarrito,
+          carrito,
+          actualizarCantidad,
+          eliminarGuitarra,
+        }}
+      />
     </Document>
   );
 }

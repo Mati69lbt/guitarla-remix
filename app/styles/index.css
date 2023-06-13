@@ -127,7 +127,7 @@ main {
   font-weight: 700;
 }
 .footer .navegacion a:last-of-type {
-  /* display: none; */
+  display: none;
 }
 .footer .copyright {
   text-align: center;
