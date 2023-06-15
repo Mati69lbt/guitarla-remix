@@ -1,53 +1,59 @@
-# Welcome to Remix!
+# GuitarLA - Tienda de Guitarras
 
-- [Remix Docs](https://remix.run/docs)
+![Logo de GuitarLA](./public/img/logo.svg)
 
-## Development
+GuitarLA es una aplicación de comercio electrónico que ofrece una amplia selección de guitarras para entusiastas de la música. Esta aplicación fue desarrollada como un prototipo/demostración para aprender y familiarizarse con las siguientes tecnologías:
 
-From your terminal:
+- Base de datos de PostgreSQL utilizada en Render.
+- Strapi como CMS (Sistema de Gestión de Contenido).
+- Cloudinary para el almacenamiento de imágenes.
+- Remix.run para el desarrollo y enrutamiento de la aplicación.
 
-```sh
-npm run dev
-```
+## Funcionalidades Principales
 
-This starts your app in development mode, rebuilding assets on file changes.
+- Navegación intuitiva y amigable para los usuarios.
+- Visualización de información detallada sobre cada guitarra disponible en la tienda.
+- Página de "Nosotros" que brinda información sobre la empresa.
+- Blog con artículos relacionados con el mundo de las guitarras.
+- Carrito de compras para agregar y gestionar productos seleccionados.
+- No se incluye una pasarela de pago, ya que el proyecto es un prototipo/demostración.
 
-## Deployment
+## Estructura del Proyecto
 
-First, build your app for production:
+El proyecto GuitarLA está estructurado de la siguiente manera:
 
-```sh
-npm run build
-```
+- **app**: Carpeta principal de la aplicación.
+  - **components**: Componentes reutilizables utilizados en las diferentes páginas.
+  - **models**: Archivos con funciones que obtienen información de Strapi.
+  - **routes**: Archivos de enrutamiento para cada página.
+  - **styles**: Archivos CSS para estilos personalizados.
+  - **utils**: Archivos de utilidades, incluyendo un helper para el formateo de fechas.
+  - **index.js**: Archivo principal de la aplicación.
+  - **root.js**: Archivo de enrutamiento principal.
 
-Then run the app in production mode:
+## Configuración de Imágenes con Cloudinary
 
-```sh
-npm start
-```
+Las imágenes de las guitarras se gestionan y almacenan utilizando Cloudinary. En Strapi, se ha configurado la integración con Cloudinary para permitir la subida directa de imágenes a través de la aplicación de Strapi.
 
-Now you'll need to pick a host to deploy it to.
+## Capturas de Pantalla
 
-### DIY
+A continuación, se muestran algunas capturas de pantalla de la aplicación:
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
+1. Página de inicio:
+   ![Captura de Pantalla - Página de Inicio](./public/img/home.jpeg)
 
-Make sure to deploy the output of `remix build`
+2. Página de Tienda:
+   ![Captura de Pantalla - Página de Tienda](./public/img/tienda.jpeg)
 
-- `build/`
-- `public/build/`
+3. Página de Blog:
+   ![Captura de Pantalla - Página de Blog](./public/img/blog.jpeg)
 
-### Using a Template
+4. Carrito de Compras:
+   ![Captura de Pantalla - Carrito de Compras](./public/img/carrito.jpeg)
 
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
+5. Comprar Guitarra:
+   ![Captura de Pantalla - Comprar Guitarra](./public/img/Guitarra.jpeg)
 
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+## Gracias!!!
+
+![Captura de Pantalla - nostros](./public/img/nosotros.jpeg)
