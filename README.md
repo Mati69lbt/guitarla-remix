@@ -1,6 +1,6 @@
 # GuitarLA - Tienda de Guitarras
 
-![Logo de GuitarLA](./public/img/logo.svg)
+![Logo de GuitarLA](./public/img/logo.jpeg)
 
 GuitarLA es una aplicación de comercio electrónico que ofrece una amplia selección de guitarras para entusiastas de la música. Esta aplicación fue desarrollada como un prototipo/demostración para aprender y familiarizarse con las siguientes tecnologías:
 
